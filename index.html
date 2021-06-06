@@ -39,40 +39,8 @@
         </div>
     </div>
 
-  <script>
-        var info2 = "<h1>Deli Pollo</h1>"
-
-        function iniciaMapa() {
-            var propiedades = {
-                center: {
-                    lat: 16.8638,
-                    lng: -99.8816
-                },
-                zoom: 9
-            };
-            const mapa = document.getElementById("map")
-            const map = new google.maps.Map(mapa, propiedades)
-              
-                let propiedadesMarcador2 = {
-                    position: {
-                        lat: 18.9649084,
-                        lng: 99.2278018
-                    },
-                    map,
-                    title: "Marcardor 2"
-                }
-                const marcador2 = new google.maps.Marker(propiedadesMarcador2);
-
-                map.setCenter(propiedadesMarcador2.position)
-                const infowindow2 = new google.maps.InfoWindow({
-                    content: info2
-                })
-                marcador2.addListener("click", () => {
-                    infowindow2.open(map, marcador2);
-                })
-        }
-    </script>
-
+  
+<script src="mapa.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
