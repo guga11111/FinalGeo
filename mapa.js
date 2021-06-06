@@ -3,10 +3,10 @@ var info2 = "<h1>Deli Pollo</h1>"
         function iniciaMapa() {
             var propiedades = {
                 center: {
-                    lat: 16.8638,
-                    lng: -99.8816
+                 lat: 18.9649084,
+                        lng: -99.2278018
                 },
-                zoom: 9
+                zoom: 13
             };
             const mapa = document.getElementById("map")
             const map = new google.maps.Map(mapa, propiedades)
