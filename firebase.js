@@ -1,3 +1,6 @@
+
+ // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 var firebaseConfig = {
     apiKey: "AIzaSyCDTiJ5iRF7FvH8ndogLPy3mvXwEJFfcGA",
     authDomain: "delipollo-4fbc6.firebaseapp.com",
@@ -20,4 +23,4 @@ var firebaseConfig = {
     // ..
   });
   }
-  // Initialize Firebase
+ 
