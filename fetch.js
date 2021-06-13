@@ -1,4 +1,4 @@
-$("#col-tarjeta:first").hide();
+$("#col-tarjeta:first").hide();//hols
 fetch('datos.json')
     .then(function (response) {
         response.json().then(function (datos) {
