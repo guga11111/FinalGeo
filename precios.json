@@ -1,10 +1,10 @@
 [{
-	"country": "Mexico",
-	"cases": 203
+	"tipo": "Rostizado",
+	"costo": 90
 }, {
-	"country": "Panama",
-	"cases": 200
+	"tipo": "Adobado",
+	"costo": 110
 }, {
-	"country": "Colombia",
-	"cases": 196
+	"tipo": "Mole",
+	"costo": 120
 }]
