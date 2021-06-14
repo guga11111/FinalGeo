@@ -6,7 +6,7 @@
     <title>Fecht1</title>
 </head>
 <style>
-  #p{
+  p{
     color: red;
   }
 </style>
@@ -24,6 +24,8 @@
                 datos.forEach( registro => {
                     console.log(registro.tipo);
                     let nombre = document.createElement("p");
+                    let img = document.createElement("img");
+                    img.src= "Famoso.png"
                     nombre.textContent = "Tipo: " + registro.tipo + ", Costo del pollo:" + registro.costo;
                     paises.appendChild(nombre);
                 });
