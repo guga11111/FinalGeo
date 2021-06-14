@@ -22,7 +22,7 @@
             response.json().then( function(datos){
 
                 datos.forEach( registro => {
-                    console.log(registro.country);
+                    console.log(registro.tipo);
                     let nombre = document.createElement("p");
                     nombre.textContent = "Tipo: " + registro.tipo + ", Costo del pollo:" + registro.costo;
                     paises.appendChild(nombre);
