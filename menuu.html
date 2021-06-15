@@ -27,13 +27,39 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav" >
         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        <a class="nav-link" href="#">Cerrar Sesión</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </div>
+        <a class="nav-link" id="salir" href="#">Cerrar Sesión</a>
+<a class="nav-link" href="#" data-bs-toggle="modal" id="micuenta" data-bs-target="#ModalMiCuenta">Mi
+                        Cuenta</a>      </div>
     </div>
   </div>
   </nav>
+
+      <div class="modal fade" id="ModalMiCuenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div style="width: 200px; height: 150px;">
+                        <span class="inicio-titulo-1">
+                            Mi cuenta
+                        </span>
+                    </div> <br>
+                    <div class="micuenta">
+                        Info de la cuenta
+                    </div>
+                </div>
+                <div class="container-fluid" id="myaccount">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <button type="submit" name="button" data-bs-dismiss="modal"
+                                class="btn btn-outline-secondary">
+                                <i class="fas fa-times-circle"></i> Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
   <center>
     <div class="container">
@@ -83,6 +109,17 @@ const auth = firebase.auth();
         }
     })
 };
+const salir = document.getElementById('salir');
+
+salir.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    auth.signOut().then(() => {
+        alert('Sesón cerrada');
+        window.location = "index.html";
+    });
+});
+
 
   </script>
   <!-- Script -->

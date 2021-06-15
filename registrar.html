@@ -97,7 +97,8 @@
 
     firebase.initializeApp(firebaseConfig);
     
-    
+    const db = firebase.firestore();
+
     const formaingresar = document.getElementById('register');
     formaingresar.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -105,15 +106,20 @@
       let contrasena = formaingresar['password'].value;
 
       firebase.auth().createUserWithEmailAndPassword(correo, contrasena).then(cred => {
-        formaingresar.reset();
-        alert('Registro exitoso');
-      window.location='iniciarsesion.html';
+        return db.collection('usuarios').doc(cred.user.uid).set({
+            nombre: formaingresar['nombre'].value,
+            numero: formaingresar['numero'].value,
+        });
       }).catch(err => {
         alert(err);
        console.log(err);
       });
-
+          window.location = "iniciarsesion.html";
     });
+
+
+
+   
   </script>
 
 

@@ -94,10 +94,8 @@ const auth = firebase.auth();
     auth.onAuthStateChanged( user =>{
         if (user){
           window.location="menuu.html";
-          alert("sesión previamente iniciada por otro usuario");
             console.log(user);
         } else {
-            alert(user);
         }
     })
 };
