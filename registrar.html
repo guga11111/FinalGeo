@@ -106,16 +106,20 @@
       let contrasena = formaingresar['password'].value;
 
       firebase.auth().createUserWithEmailAndPassword(correo, contrasena).then(cred => {
-        return db.collection('usuarios').doc(cred.user.uid).set({
+         db.collection('usuarios').doc(cred.user.uid).set({
             nombre: formaingresar['nombre'].value,
             numero: formaingresar['numero'].value,
+          
         });
+          window.location='menuu.html'
       }).catch(err => {
         alert(err);
        console.log(err);
       });
-          window.location = "iniciarsesion.html";
     });
+    function ola(){
+        window.location='menuu.html';
+    }
 
 
 
