@@ -19,7 +19,7 @@
 
       firebase.auth().signInWithEmailAndPassword(correo, contrasena).then(cred => {
         formaingresar.reset();
-        window.location='Menu.html';
+        window.location='menuu.html';
         alert('Si iniciaste sesión');
       }).catch(err => {
         alert('No pudiste iniciar sesión');
