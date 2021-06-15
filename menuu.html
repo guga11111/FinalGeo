@@ -104,7 +104,6 @@ const auth = firebase.auth();
         if (user){
             console.log(user);
         } else {
-            alert(user);
             window.location="iniciarsesion.html";
         }
     })
@@ -115,7 +114,6 @@ salir.addEventListener('click', (e) => {
     e.preventDefault();
 
     auth.signOut().then(() => {
-        alert('Sesón cerrada');
         window.location = "index.html";
     });
 });

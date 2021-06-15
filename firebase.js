@@ -12,7 +12,8 @@
     
     
     const formaingresar = document.getElementById('register');
-    formaingresar.addEventListener('submit', (e) => {
+    function ingresar(params) {
+        formaingresar.addEventListener('submit', (e) => {
       e.preventDefault();
       let correo = formaingresar['email'].value;
       let contrasena = formaingresar['password'].value;
@@ -27,3 +28,7 @@
       });
 
     });
+    }
+
+  
+  
