@@ -28,35 +28,33 @@
       <div class="navbar-nav" >
         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
         <a class="nav-link" id="salir" href="#">Cerrar Sesión</a>
-            <a class="nav-link active" aria-current="page" href="#" data-toggle="modal"
-                                data-target="#myAccountmodal">Mi cuenta</a>
+                                      <a class="nav-link logged-in" href="#" data-bs-toggle="modal" data-bs-target="#micuentamodal">Mi Cuenta</a>
+
      </div>
     </div>
   </div>
   </nav>
 
-<div class="modal fade" id="micuentamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="micuentaModalLabel">Mi cuenta</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-            <div class="row m-2">
-                <div class="col-12 datosdelacuenta" >
 
+ <div class="modal fade" id="micuentamodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mi Cuenta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <h5 class="datos">
+
+                    </h5>
+                    <div class="modal-body datosdelacuenta">
+                        
+                    </div>
+                    <div class="modal-footer"> 
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-    </div>
-    </div>
-</div>
 
 
   <center>
@@ -100,7 +98,8 @@ const auth = firebase.auth();
       window.onload = function () {
     auth.onAuthStateChanged( user =>{
         if (user){
-            console.log(user);
+
+            console.log(user.email);
         } else {
             window.location="iniciarsesion.html";
         }
@@ -115,11 +114,21 @@ salir.addEventListener('click', (e) => {
         window.location = "index.html";
     });
 });
+    const db = firebase.firestore();
+
+
+
+
+
+
+
+
+
 
 
   </script>
   <script src="index.js"></script>
-  <script src="modal.js"></script>
+  <script src="firebase.js"></script>
   <!-- Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="pollos.json"></script>

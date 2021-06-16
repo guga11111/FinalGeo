@@ -1,6 +1,16 @@
-
+auth.onAuthStateChanged( user=>{
+  if(user){
+    configurarMenu(user);
+  }
+  else {
+    configurarMenu();
+  }
+})
+ 
+ 
+ 
  var firebaseConfig = {
-      apiKey: "AIzaSyCDTiJ5iRF7FvH8ndogLPy3mvXwEJFfcGA",
+       apiKey: "AIzaSyCDTiJ5iRF7FvH8ndogLPy3mvXwEJFfcGA",
       authDomain: "delipollo-4fbc6.firebaseapp.com",
       projectId: "delipollo-4fbc6",
       storageBucket: "delipollo-4fbc6.appspot.com",
