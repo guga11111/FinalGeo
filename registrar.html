@@ -110,12 +110,13 @@
          db.collection('usuarios').doc(cred.user.uid).set({
             nombre: formaingresar['nombre'].value,
             numero: formaingresar['numero'].value,
-          
         });
+        alert('usuario registrado')
       }).catch(err => {
         alert(err);
        console.log(err);
       });
+    
     });
     function ola(){
         window.location='menuu.html';
